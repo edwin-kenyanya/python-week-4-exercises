@@ -22,8 +22,9 @@ def update_utxo(utxo: dict, new_amount: int) -> None:
 def unpack_utxo(utxo: dict) -> str:
     """
     Unpacks a UTXO dictionary and returns a formatted string representation.
+    Expected format: "txid: abc123, vout: 0, amount: 100"
     """
-    return f"UTXO(txid={utxo['txid']}, vout={utxo['vout']}, amount={utxo['amount']})"
+    return f"txid: {utxo['txid']}, vout: {utxo['vout']}, amount: {utxo['amount']}"
 
 def swap_addresses(addr1: str, addr2: str) -> tuple:
     """
